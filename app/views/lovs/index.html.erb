@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lovs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Table</th>
+      <th>Column</th>
+      <th>Value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lovs.each do |lov| %>
+      <tr>
+        <td><%= lov.table %></td>
+        <td><%= lov.column %></td>
+	<td><%= lov.value %></td>
+        <td><%= link_to 'Show', lov %></td>
+        <td><%= link_to 'Edit', edit_lov_path(lov) %></td>
+        <td><%= link_to 'Destroy', lov, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lov', new_lov_path %>

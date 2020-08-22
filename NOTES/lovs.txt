@@ -1,0 +1,8 @@
+Lovs
+Table	Column	Value	
+tasks	task_name	PS Lesson Emails	Show	Edit	Destroy
+tasks	task_name	Class Activity Supply Boxes	Show	Edit	Destroy
+tasks	task_name	Writing Curriculum	Show	Edit	Destroy
+tasks	task_name	Editing Curriculum	Show	Edit	Destroy
+tasks	task_name	Children's Ministry Team Meeting	Show	Edit	Destroy
+tasks	task_name	Sunday Services	Show	Edit	Destroy

@@ -1,0 +1,2 @@
+class Lov < ApplicationRecord
+end

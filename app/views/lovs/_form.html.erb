@@ -1,0 +1,32 @@
+<%= form_with(model: lov, local: true) do |form| %>
+  <% if lov.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lov.errors.count, "error") %> prohibited this lov from being saved:</h2>
+
+      <ul>
+        <% lov.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :table %>
+    <%= form.text_field :table %>
+  </div>
+
+  <div class="field">
+    <%= form.label :column %>
+    <%= form.text_field :column %>
+  </div>
+
+  <div>
+    <%= form.label :value %>
+    <%= form.text_field :value %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

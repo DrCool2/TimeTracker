@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Clocked in:</strong>
+  <%= @entry.clocked_in %>
+</p>
+
+<p>
+  <strong>Clocked out:</strong>
+  <%= @entry.clocked_out %>
+</p>
+
+<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Back', entries_path %>
