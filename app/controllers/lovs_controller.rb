@@ -69,6 +69,6 @@ class LovsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def lov_params
-      params.require(:lov).permit(:table, :column, :value)
+      params.require(:lov).permit(:tbl, :col, :val)
     end
 end

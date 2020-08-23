@@ -7,6 +7,12 @@ ruby '2.7.0'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Ruby troubleshooter
 gem 'pry'
+# Simple Form
+gem 'simple_form'
+# Bootstrap CSS
+gem 'bootstrap', '~> 4.5.2'
+
+
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server

@@ -5,9 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Table</th>
-      <th>Column</th>
-      <th>Value</th>
+      <th>Tbl</th>
+      <th>Col</th>
+      <th>Val</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +15,9 @@
   <tbody>
     <% @lovs.each do |lov| %>
       <tr>
-        <td><%= lov.table %></td>
-        <td><%= lov.column %></td>
-	<td><%= lov.value %></td>
+        <td><%= lov.tbl %></td>
+        <td><%= lov.col %></td>
+	      <td><%= lov.val %></td>
         <td><%= link_to 'Show', lov %></td>
         <td><%= link_to 'Edit', edit_lov_path(lov) %></td>
         <td><%= link_to 'Destroy', lov, method: :delete, data: { confirm: 'Are you sure?' } %></td>

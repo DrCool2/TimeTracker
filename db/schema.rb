@@ -27,11 +27,11 @@ ActiveRecord::Schema.define(version: 2020_08_22_140000) do
   end
 
   create_table "lovs", force: :cascade do |t|
-    t.string "table"
-    t.string "column"
+    t.string "tbl"
+    t.string "col"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "value"
+    t.string "val"
   end
 
   create_table "tasks", force: :cascade do |t|
