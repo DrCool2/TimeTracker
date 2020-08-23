@@ -16,13 +16,14 @@
   <tbody>
     <% @entries.each do |entry| %>
       <tr>
-        <td><%= entry.clocked_in %></td>
-        <td><%= entry.clocked_out %></td>
-	<td><%= User.find_by_id(entry.user_id) %></td>
-	<td><%= Task.find_by_id(entry.task_id) %></td>
-        <td><%= link_to 'Show', entry %></td>
-        <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
-        <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+         <td><%= entry.clocked_in %></td>
+         <td><%= entry.clocked_out %></td>
+	       <td><%= User.find_by_id(entry.user_id).first_name %> <%= User.find_by_id(entry.user_id).last_name %></td>
+	       <td><%= Task.find_by_id(entry.task_id).task_name %></td>
+
+         <td><%= link_to 'Show', entry %></td>
+         <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
+         <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,0 +1,9 @@
+
+8-23-2020 6:19am
+1) Confirm that Entries and Tasks and Lovs should be Model Associated correctly?
+It works, but I don't know if it should work that way. Too Complicated?
+Maybe I need to just make one table for Entries and make a column called Tasks since LOV table kind of replicates the list of task options?
+
+2) Entries
+  - change time zone to Eastern
+  - list Task Name instead of ID as a Dropdown box

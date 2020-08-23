@@ -18,8 +18,11 @@
   <div class="field">
        <%# @task_name_lov = Lov.where("tbl LIKE ?", "tasks").where("col LIKE ?", "task_name").all.map { |r| [r.val, r.id] } %>
        <%= @task_name_lov = Lov.where("tbl LIKE ?", "tasks").where("col LIKE ?", "task_name").all.map { |r| [r.val, r.id] } %>
-
+<hr>
        <%= form.input :task_name, collection: @task_name_lov %>
+
+       <%= @task_name_lov = Lov.find_by_id(:task_name) %>
+       <%= form.input :task_name, value: @task_name_lov  %>
   </div>
 
   <div class="field">

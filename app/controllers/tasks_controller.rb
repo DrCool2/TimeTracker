@@ -25,6 +25,8 @@ class TasksController < ApplicationController
   # POST /tasks.json
   def create
     @task = Task.new(task_params)
+    @task_name = task_params[:task_name]
+    @task_name = Lov.find_by_id(:task_name)
 
     respond_to do |format|
       if @task.save
