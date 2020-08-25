@@ -14,46 +14,35 @@
 
   <div class="field">
     <%= form.label :clocked_in %>
-    <%= form.datetime_select :clocked_in %>
+    <%= form.datetime_select :clocked_in, ampm: true, order: [:month, :day, :year] %>
+    <%#form.text_field :clocked_in, class: 'form-control datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :clocked_out %>
-    <%= form.datetime_select :clocked_out %>
+    <%= form.datetime_select :clocked_out, ampm: true, order: [:month, :day, :year]  %>
   </div>
 
   <div>
-    <%# form.label :user_id %>
-    <%#User.all do |u| @user.push() %>
     <% @user = [] %>
-    <%# User.all.each do |u| @user.push([[u.first_name, u.last_name],[u.id]]) end %>
-    <%# User.all.each do |u| @user.push([[u.first_name, u.last_name],[u.id]]) end %>
-    <%# User.all.each do |u| @user.push([[u.full_name],[u.id]]) end %>
-
     <% User.all.each do |u|
-      # @user.push([[u.first_name + " " + u.last_name],[u.id].to_s])
-      @user.push([u.full_name(u.id),u.id])
-    end
-
+        @user.push([u.full_name(u.id),u.id])
+       end
     %>
-    <%# form.input :user_id, collection: [['Scott Weinman','1'],['Shannon Weinman','2']] %>
     <%= form.input :user_id, collection: @user %>
   </div>
 
   <div>
-    <%# form.label :task_id %>
-
     <% @task = [] %>
     <% Task.all.each do |t|
         @task.push([t.task_name,t.id])
       end
       %>
-
-    <%# form.number_field :task_id %>
     <%= form.input :task_id, collection: @task %>
-    <%# binding.pry %>
-  </div>
 
+    <%= link_to 'New Task', new_task_path %>
+  </div>
+<p>
   <div class="actions">
     <%= form.submit %>
   </div>

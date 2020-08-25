@@ -1,8 +1,9 @@
 <%# form_with(model: task, local: true) do |form| %>
 <%= simple_form_for task, local: true do |form| %>
   <%= form.error_notification %>
-  <hr>
+
   <% if task.errors.any? %>
+  <hr>
     <div id="error_explanation">
       <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
 
@@ -12,16 +13,24 @@
         <% end %>
       </ul>
     </div>
-  <% end %>
   <hr>
+  <% end %>
+
 
   <div class="field">
        <%# @task_name_lov = Lov.where("tbl LIKE ?", "tasks").where("col LIKE ?", "task_name").all.map { |r| [r.val, r.id] } %>
-       <%= @task_name_lov = Lov.where("tbl LIKE ?", "tasks").where("col LIKE ?", "task_name").all.map { |r| [r.val, r.id] } %>
-<hr>
-       <%= form.input :task_name, collection: @task_name_lov %>
+       <%# @task_name_lov = Lov.where("tbl LIKE ?", "tasks").where("col LIKE ?", "task_name").all.map { |r| [r.val, r.id] } %>
+       <%# form.input :task_name, collection: @task_name_lov %>
 
-       <%= @task_name_lov = Lov.find_by_id(:task_name) %>
+       <% @task_name_lov = Lov.find_by_id(:task_name) %>
+       <%# form.input :task_name, value: @task_name_lov  %>
+
+       <datalist id="task_name_lov">
+         <% Lov.find_by_id(:task_name) do |t| %>
+          <option value="<%= t.task_name %>"></option>
+         <% end %>
+       </datalist>
+
        <%= form.input :task_name, value: @task_name_lov  %>
   </div>
 
