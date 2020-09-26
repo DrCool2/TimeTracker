@@ -22,7 +22,8 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: <%= Rails.application.credentials.dig(:development, :username) %>
   password: <%= Rails.application.credentials.dig(:development, :password) %>
-  host: 10.0.1.166
+#  host: 10.0.1.166
+  host: <%= Rails.application.credentials.dig(:development, :host) %>
 # 10.0.1.166 is the Test Database server
 
 development:

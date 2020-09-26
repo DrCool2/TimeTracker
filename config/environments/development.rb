@@ -3,6 +3,7 @@ Rails.application.configure do
 
   # permit work within Development
   config.hosts << "app-timetracker"
+  config.hosts << "timetracker.itsmymacguy.com"
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
