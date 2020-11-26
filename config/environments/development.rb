@@ -1,8 +1,11 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+<<<<<<< HEAD
   # permit work within Development
   config.hosts << "app-timetracker"
+=======
+>>>>>>> master
   config.hosts << "timetracker.itsmymacguy.com"
 
   # In the development environment your application's code is reloaded on

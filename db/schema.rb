@@ -10,11 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_08_22_140000) do
+=======
+ActiveRecord::Schema.define(version: 0) do
+>>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "entries", force: :cascade do |t|
     t.datetime "clocked_in"
     t.datetime "clocked_out"
@@ -51,4 +56,6 @@ ActiveRecord::Schema.define(version: 2020_08_22_140000) do
 
   add_foreign_key "entries", "tasks"
   add_foreign_key "entries", "users"
+=======
+>>>>>>> master
 end
