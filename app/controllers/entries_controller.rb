@@ -19,6 +19,8 @@ class EntriesController < ApplicationController
 
   # GET /entries/1/edit
   def edit
+    @tasks = []
+    Entry.all.each do |t| @tasks.push(t.task_id) end
   end
 
   # POST /entries
