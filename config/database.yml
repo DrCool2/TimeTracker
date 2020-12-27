@@ -25,6 +25,8 @@ default: &default
 #  host: 10.0.1.166
   host: <%= Rails.application.credentials.dig(:development, :host) %>
 # 10.0.1.166 is the Test Database server
+#  host: <%= Rails.application.credentials.dig(:development, :host) %>
+
 
 development:
   <<: *default
